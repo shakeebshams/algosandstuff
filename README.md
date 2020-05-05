@@ -1,3 +1,2 @@
 # AlgoCasts
-
-Companion repo to a course on Udemy.com
+DS and Algo practice with JS
