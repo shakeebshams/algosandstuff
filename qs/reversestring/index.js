@@ -35,9 +35,16 @@ function reverse(str) {
     let reversedString = '';
     for (var i = arr.length - 1; i > -1; i--) {
         reversedString += arr[i];
+        debugger;
     }
     console.log(reversedString);
     return reversedString;
 }
 
+reverse('asdf');
 module.exports = reverse;
+
+//using debugger
+//node inspect reversestring/index.js
+//c to continue
+//repl to check js variables at current state
