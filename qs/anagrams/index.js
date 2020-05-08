@@ -8,7 +8,7 @@
 //   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
 //   anagrams('Hi there', 'Bye there') --> False
 
-function anagrams(stringA, stringB) {
+function anagrams2(stringA, stringB) {
     var aMap = mapGenerator(stringA);
     var bMap = mapGenerator(stringB);
 
@@ -39,6 +39,18 @@ function mapGenerator(string) {
     }
 
     return map;
+}
+
+function anagrams(stringA, stringB) {
+    a = cleanstring(stringA);
+    b = cleanstring(stringB);
+    console.log(a);
+    console.log(b);
+    return a === b;
+}
+
+function cleanstring(string) {
+    return string.replace(/[^\w]/g, '').toLowerCase().split('').sort().join('');
 }
 
 
