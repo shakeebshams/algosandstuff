@@ -8,7 +8,18 @@
 // Example:
 //   fib(4) === 3
 
+
+//recursive solution O(2^n)
 function fib(n) {
+    if (n < 2) {
+        return n;
+    }
+
+    return fib(n-1) + fib(n-2);
+}
+
+//iterative solution O(n)
+function fib2(n) {
     let result = [0, 1];
 
     for(let i = 2; i <= n; i++) {
