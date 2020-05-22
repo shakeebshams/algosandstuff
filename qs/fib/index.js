@@ -9,8 +9,35 @@
 //   fib(4) === 3
 
 
+//memoization solution
+function fibb(n) {
+    if (n < 2) {
+        return n;
+    }
+
+    return fib(n-1) + fib(n-2);
+}
+
+function memoize(fn) {
+    const cache = {};
+    return function(...args) {
+        if (cache[args]) {
+            return cache[args];
+        }
+
+        const result = fn.apply(this, args);
+        cache[args] = result;
+        return result;
+    };
+}
+
+const fib = memoize(fibb);
+
+
+
+
 //recursive solution O(2^n)
-function fib(n) {
+function fib3(n) {
     if (n < 2) {
         return n;
     }
